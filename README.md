@@ -50,8 +50,8 @@ npm install -g genesys-cloud-mcp-plus
 
 ### Manual Installation
 ```bash
-git clone https://github.com/MakingChatbots/genesys-cloud-mcp-server.git
-cd genesys-cloud-mcp-server
+git clone https://github.com/AmrKhalil9/genesys-cloud-mcp-plus.git
+cd genesys-cloud-mcp-plus
 npm install
 npm run build
 ```
@@ -206,14 +206,14 @@ ISC License - see [LICENSE](./LICENSE) for details.
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/MakingChatbots/genesys-cloud-mcp-server)
+- [GitHub Repository](https://github.com/AmrKhalil9/genesys-cloud-mcp-plus)
 - [NPM Package](https://www.npmjs.com/package/genesys-cloud-mcp-plus)
 - [MakingChatbots.com](https://makingchatbots.com)
 
 ## 📞 Support
 
 For issues, questions, or feature requests:
-- GitHub Issues: [Report here](https://github.com/MakingChatbots/genesys-cloud-mcp-server/issues)
+- GitHub Issues: [Report here](https://github.com/AmrKhalil9/genesys-cloud-mcp-plus/issues)
 - Documentation: Check the AI Agent Guide for implementation details
 
 ---
