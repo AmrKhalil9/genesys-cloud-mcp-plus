@@ -109,26 +109,92 @@ Your OAuth client needs these permissions:
 ## 🚀 Usage
 
 ### Claude Desktop Integration
-Add to your Claude Desktop configuration:
+
+#### **Method 1: Global Installation (Recommended)**
+First install globally:
+```bash
+npm install -g genesys-cloud-mcp-plus
+```
+
+Then add to your `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
     "genesys-cloud-mcp-plus": {
+      "type": "stdio",
       "command": "genesys-cloud-mcp-plus",
       "env": {
         "GENESYSCLOUD_REGION": "eu-central-1",
-        "GENESYSCLOUD_OAUTHCLIENT_ID": "your-client-id",
-        "GENESYSCLOUD_OAUTHCLIENT_SECRET": "your-client-secret"
+        "GENESYSCLOUD_OAUTHCLIENT_ID": "<PUT OAUTHCLIENT ID HERE>",
+        "GENESYSCLOUD_OAUTHCLIENT_SECRET": "<PUT OAUTHCLIENT SECRET HERE>"
       }
     }
   }
 }
 ```
 
-**Configuration Examples:**
+#### **Method 2: NPX (No Installation Required)**
+Add this to your `claude_desktop_config.json`:
+```json
+{
+  "mcpServers": {
+    "genesys-cloud-mcp-plus": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "genesys-cloud-mcp-plus"],
+      "env": {
+        "GENESYSCLOUD_REGION": "eu-central-1",
+        "GENESYSCLOUD_OAUTHCLIENT_ID": "<PUT OAUTHCLIENT ID HERE>",
+        "GENESYSCLOUD_OAUTHCLIENT_SECRET": "<PUT OAUTHCLIENT SECRET HERE>"
+      }
+    }
+  }
+}
+```
+
+#### **Configuration Examples by Region:**
 - **UAE/Middle East**: `"GENESYSCLOUD_REGION": "me-central-1"`
 - **EMEA**: `"GENESYSCLOUD_REGION": "eu-central-1"`
 - **Americas**: `"GENESYSCLOUD_REGION": "us-east-1"`
+- **Australia**: `"GENESYSCLOUD_REGION": "ap-southeast-2"`
+- **Japan**: `"GENESYSCLOUD_REGION": "ap-northeast-1"`
+- **FedRAMP**: `"GENESYSCLOUD_REGION": "us-east-2"`
+
+#### **Complete Example Configuration:**
+```json
+{
+  "mcpServers": {
+    "genesys-cloud-mcp-plus": {
+      "type": "stdio",
+      "command": "genesys-cloud-mcp-plus",
+      "env": {
+        "GENESYSCLOUD_REGION": "me-central-1",
+        "GENESYSCLOUD_OAUTHCLIENT_ID": "29aa13c7-1693-47dc-8672-fb502990971c",
+        "GENESYSCLOUD_OAUTHCLIENT_SECRET": "bCoYOs1qeOcXjDfwQM6XVA-kfYIl0wYiLyLVrbj7IAc"
+      }
+    }
+  }
+}
+```
+
+### Quick Setup Guide
+
+1. **Install the package:**
+   ```bash
+   npm install -g genesys-cloud-mcp-plus
+   ```
+
+2. **Get your Genesys Cloud credentials:**
+   - Go to Genesys Cloud Admin → Integrations → OAuth
+   - Create a new OAuth client with required permissions
+   - Copy the Client ID and Client Secret
+
+3. **Configure Claude Desktop:**
+   - Open `claude_desktop_config.json`
+   - Add the MCP server configuration (see examples above)
+   - Replace placeholders with your actual credentials
+
+4. **Restart Claude Desktop** and start exploring your data!
 
 ### Command Line
 ```bash
