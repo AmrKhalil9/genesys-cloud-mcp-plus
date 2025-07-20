@@ -60,17 +60,42 @@ npm run build
 
 ### Environment Variables
 ```bash
-export GENESYSCLOUD_REGION="your-region"  # e.g., "mypurecloud.de", "mypurecloud.com"
+export GENESYSCLOUD_REGION="your-region"  # e.g., "eu-central-1", "me-central-1", "us-east-1"
 export GENESYSCLOUD_OAUTHCLIENT_ID="your-client-id"
 export GENESYSCLOUD_OAUTHCLIENT_SECRET="your-client-secret"
 ```
 
+**Region Examples:**
+- **UAE/Middle East**: `me-central-1`
+- **EMEA**: `eu-central-1`
+- **Americas**: `us-east-1`
+- **Australia**: `ap-southeast-2`
+- **Japan**: `ap-northeast-1`
+
 ### Supported Regions
-- `mypurecloud.com` (Americas)
-- `mypurecloud.de` (EMEA)
-- `mypurecloud.ie` (Ireland)
-- `mypurecloud.com.au` (APAC)
-- `mypurecloud.jp` (Japan)
+
+#### **🌎 Americas (5 Regions)**
+- `us-east-1` → `mypurecloud.com` (Americas - Main)
+- `us-east-2` → `use2.us-gov-pure.cloud` (FedRAMP - US Government)
+- `us-west-2` → `usw2.pure.cloud` (US West)
+- `ca-central-1` → `cac1.pure.cloud` (Canada)
+- `sa-east-1` → `sae1.pure.cloud` (South America)
+
+#### **🌍 Europe, Middle East, Africa (5 Regions)**
+- `eu-central-1` → `mypurecloud.de` (EMEA - Main)
+- `eu-west-1` → `mypurecloud.ie` (Ireland)
+- `eu-west-2` → `euw2.pure.cloud` (Europe West 2)
+- `eu-central-2` → `euc2.pure.cloud` (Europe Central 2)
+- `me-central-1` → `mec1.pure.cloud` (Middle East - UAE)
+
+#### **🌏 Asia Pacific (5 Regions)**
+- `ap-southeast-2` → `mypurecloud.com.au` (Australia)
+- `ap-northeast-1` → `mypurecloud.jp` (Japan)
+- `ap-south-1` → `aps1.pure.cloud` (Asia Pacific South)
+- `ap-northeast-2` → `apne2.pure.cloud` (Asia Pacific Northeast 2)
+- `ap-northeast-3` → `apne3.pure.cloud` (Asia Pacific Northeast 3)
+
+**Total: 15 Regions** - Full global coverage including UAE/Middle East support!
 
 ### OAuth Permissions Required
 Your OAuth client needs these permissions:
@@ -91,7 +116,7 @@ Add to your Claude Desktop configuration:
     "genesys-cloud-mcp-plus": {
       "command": "genesys-cloud-mcp-plus",
       "env": {
-        "GENESYSCLOUD_REGION": "mypurecloud.de",
+        "GENESYSCLOUD_REGION": "eu-central-1",
         "GENESYSCLOUD_OAUTHCLIENT_ID": "your-client-id",
         "GENESYSCLOUD_OAUTHCLIENT_SECRET": "your-client-secret"
       }
@@ -99,6 +124,11 @@ Add to your Claude Desktop configuration:
   }
 }
 ```
+
+**Configuration Examples:**
+- **UAE/Middle East**: `"GENESYSCLOUD_REGION": "me-central-1"`
+- **EMEA**: `"GENESYSCLOUD_REGION": "eu-central-1"`
+- **Americas**: `"GENESYSCLOUD_REGION": "us-east-1"`
 
 ### Command Line
 ```bash
