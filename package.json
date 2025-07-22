@@ -1,6 +1,6 @@
 {
   "name": "genesys-cloud-mcp-plus",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Genesys Cloud MCP Plus - Advanced Model Context Protocol server with 15 comprehensive tools for contact center analytics, real-time monitoring, and wrap-up code analysis. Enhanced with multi-media support and enterprise-grade features.",
   "bin": {
     "genesys-cloud-mcp-plus": "dist/cli.js"
