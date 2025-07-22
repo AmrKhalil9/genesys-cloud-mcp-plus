@@ -9,12 +9,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AmrKhalil9/genesys-cloud-mcp-plus.git"
+    "url": "https://github.com/AmrKhalil9/genesys-cloud-mcp-plus.git"
   },
   "bugs": {
     "url": "https://github.com/AmrKhalil9/genesys-cloud-mcp-plus/issues"
   },
-  "homepage": "https://github.com/AmrKhalil9/genesys-cloud-mcp-plus",
+  "homepage": "https://github.com/AmrKhalil9/genesys-cloud-mcp-plus#readme",
   "author": {
     "name": "Amr Khalil",
     "url": "https://github.com/AmrKhalil9"
